@@ -1,12 +1,9 @@
 import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio";
-import Skills from "@/components/Skills";
 import { client } from "@/sanity/lib/client";
 
-export const dynamic = "force-dynamic";
-
 async function getData() {
-  const query = `*[_type == "project"] {
+  const query = `*[_type == "project] {
     name,
     image,
     url,
@@ -23,8 +20,7 @@ export default async function Home() {
   return (
     <>
       <Hero />
-      <Portfolio projects={projects} />
-      <Skills />
+      <Portfolio />
     </>
   );
 }
