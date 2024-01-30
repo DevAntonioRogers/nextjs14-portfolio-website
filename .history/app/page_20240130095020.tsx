@@ -2,7 +2,6 @@ import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio";
 import Skills from "@/components/Skills";
 import Testimonial from "@/components/Testimonial";
-import Contact from "@/components/Contact";
 import { client } from "@/sanity/lib/client";
 
 export const dynamic = "force-dynamic";
@@ -28,7 +27,6 @@ export default async function Home() {
       <Portfolio projects={projects} />
       <Skills />
       <Testimonial />
-      <Contact />
     </>
   );
 }
